@@ -43,7 +43,7 @@ const insertLog = async (sellerId, messageObject) => {
         //console.log("Info String:", infoString);
 
         await mysqlConnection.execute(
-            "INSERT INTO info_logs (seller_id, data, info) VALUES (?, ?, ?,?)",
+            "INSERT INTO info_logs (seller_id, data, info,type) VALUES (?, ?, ?,?)",
             [sellerId, dataString, infoString, type]
         );
         console.log(`📦 Log guardado para seller ${sellerId}`);
