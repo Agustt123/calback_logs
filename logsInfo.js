@@ -56,7 +56,7 @@ const startConsumer = async () => {
     try {
         const connection = await amqp.connect(RABBITMQ_CONFIG);
         const channel = await connection.createChannel();
-        const queue = "callback_logs";
+        const queue = "callback_logsInfo";
 
         await channel.assertQueue(queue, { durable: true });
         console.log(`🎧 Escuchando la cola "${queue}"...`);
