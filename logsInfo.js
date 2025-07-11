@@ -66,7 +66,7 @@ const startConsumer = async () => {
                 try {
                     const content = msg.content.toString();
                     const logObject = JSON.parse(content);
-                    const sellerId = logObject.sellerid;
+                    const sellerId = logObject.datajson.sellerid;
                     console.log("Mensaje recibido:", logObject);
 
 
