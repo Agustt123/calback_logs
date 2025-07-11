@@ -38,8 +38,8 @@ const insertLog = async (sellerId, messageObject) => {
         const dataString = JSON.stringify(messageObject.datajson);         // todo el mensaje
         const infoString = JSON.stringify(messageObject.data);
 
-        console.log("Data String:", dataString);
-        console.log("Info String:", infoString);
+        // console.log("Data String:", dataString);
+        //console.log("Info String:", infoString);
 
         await mysqlConnection.execute(
             "INSERT INTO info_logs (seller_id, data, info) VALUES (?, ?, ?)",
