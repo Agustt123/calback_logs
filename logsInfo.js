@@ -67,6 +67,8 @@ const startConsumer = async () => {
                     const content = msg.content.toString();
                     const logObject = JSON.parse(content);
                     const sellerId = logObject.sellerid;
+                    console.log("Mensaje recibido:", logObject);
+
 
                     await insertLog(sellerId, logObject);
                     channel.ack(msg);
